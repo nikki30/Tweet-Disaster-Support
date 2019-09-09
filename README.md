@@ -33,6 +33,7 @@ https://www.oreilly.com/learning/a-guide-to-elasticsearch-5-and-the-elkelastic-s
 https://www.digitalocean.com/community/tutorials/how-to-use-kibana-dashboards-and-visualizations
 
 
+For example, this is what I got when I typed 'Earthquakes', 'Alaska' in around January 2019 (Earthquakes are common there, so more dots)
 
 ![Image description](map.png)
 
