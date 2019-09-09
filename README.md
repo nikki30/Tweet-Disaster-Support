@@ -1,4 +1,4 @@
-The following framework is implemented using Elasticsearch and Kibana. It performs real-time sentiment analysis of particular content and hash tags in twitter data using the Twitter API. Sentiment analysis is done for all the tweets for #disaster, #rescue, #help , #shootings, #help. The negative tweets' locations are plotted on a map. When we show tweets on a map, we plot them using their latitude and longitude (using Google Maps API).  The map now reflects the locations of disaster stikes.
+The following framework is implemented using Elasticsearch, Logstash and Kibana. It performs real-time sentiment analysis of particular content and hash tags in twitter data using the Twitter API. Sentiment analysis is done for all the tweets for #disaster, #rescue, #help , #shootings, #help. The negative tweets' locations are plotted on a map. When we show tweets on a map, we plot them using their latitude and longitude (using Google Maps API).  The map now reflects the locations of disaster stikes.
 
 The framework:
 
@@ -30,6 +30,9 @@ For example, this is what I got when I typed 'Earthquakes', 'Alaska' in around J
 
 ![Image description](map.png)
 
+The flow is as follows:
+
+![Image description](ELK-flow.png)
 
 
 
