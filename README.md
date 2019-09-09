@@ -1,14 +1,13 @@
-The following framework is implemented using Apache Spark Streaming, Kafka, Elasticsearch and Kibana. It performs real-time sentiment analysis of particular hash tags in twitter data. 
-Sentiment analysis for all the tweets for #trump, #obama and show them (e.g., positive, neutral, negative, etc. tweets) on a map. When we show tweets on a map, we plot them using their latitude and longitude.  
+The following framework is implemented using Apache Spark Streaming, Kafka, Elasticsearch and Kibana. It performs real-time sentiment analysis of particular content and hash tags in twitter data. 
+Sentiment analysis is done for all the tweets for #disaster, #rescue, #help , #shootings, #help. The negative tweets' locations are plotted on a map. When we show tweets on a map, we plot them using their latitude and longitude.  The map now reflects the locations of disaster stikes.
 
-
- Sentiment analysis framework
+The framework:
 
 
     1. Scrapper(tweets.py):
 The scrapper will collect all tweets and sends them to Kafka for analytics. The scraper will be a standalone program and will perform the followings:
 
-    a. Collect tweets in real-time with particular hash tags. (#trump, #obama)
+    a. Collect tweets in real-time with particular hash tags. (#rescue, #help)
     b. After getting tweets we will filter them to check if location field is present or not. 
     c. After filtering, we will send them (tweets) to Kafka.
     d. Kafka API (producer) is used. (https://kafka.apache.org/090/documentation.html#producerapi)
@@ -19,10 +18,6 @@ You need to install Kafka and run Kafka Server with Zookeeper. You should create
 
     3. Sentiment Analyzer:
 Sentiment Analysis is the process of determining whether a piece of writing is positive, negative or neutral. It's also known as opinion mining, deriving the opinion or attitude of a speaker.
-For example,
-“President Donald Trump approaches his first big test this week from a position of unusual weakness.”  - has positive sentiment.
-“Trump has the lowest standing in public opinion of any new president in modern history.” - has neutral sentiment.
-“Trump has displayed little interest in the policy itself, casting it as a thankless chore to be done before getting to tax-cut legislation he values more.” - has negative sentiment.
 
 You can use any third party sentiment analyzer like Stanford CoreNLP (java/scala), nltk(python) for sentiment analyzing. For example, you can add Stanford CoreNLP as an external library using SBT/Maven  in your scala/java project. In python you can import nltk by installing it using pip. 
 
