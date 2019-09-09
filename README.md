@@ -6,11 +6,11 @@ The framework:
     1. Scrapper(tweets.py):
 The scrapper will collect all tweets. The scraper will be a standalone program and will perform the followings:
 
-    a. Collect tweets in real-time with particular hash tags. (#rescue, #help)
-    b. After getting tweets we will filter them to check if location field is present or not. 
-    
+a. Collect tweets in real-time with particular hash tags. (#rescue, #help)
+b. After getting tweets we will filter them to check if location field is present or not. 
+
     2. Sentiment Analyzer:
-Sentiment Analysis is the process of determining whether a piece of writing is positive, negative or neutral. It's also known as opinion mining, deriving the opinion or attitude of a speaker.
+Sentiment Analysis is the process of determining whether a piece of writing is positive, negative or neutral. It's also known   as opinion mining, deriving the opinion or attitude of a speaker.
 
 You can use any third party sentiment analyzer like Stanford CoreNLP (java/scala), nltk(python) for sentiment analyzing. For example, you can add Stanford CoreNLP as an external library using SBT/Maven  in your scala/java project. In python you can import nltk by installing it using pip. 
 
